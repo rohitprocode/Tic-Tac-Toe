@@ -6,8 +6,12 @@ nav{
     background-color:rgb(81, 20, 91);
     color:white;
     height: 75px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    padding:0px 12px;
 }
 nav ul{
     list-style-type: none;
-    font-size: 50px;
+    
 }

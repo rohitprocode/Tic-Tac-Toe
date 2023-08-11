@@ -4,6 +4,7 @@ console.log("Welcome to MyTicTacToe");
 let bg_music = new Audio("music.mp3");
 let turn_music = new Audio("ting.mp3");
 let gameOver_music = new Audio("gameover.mp3");
+let isGameOver = false;
 
 //Initial Default Value 
 let turn = "X";
@@ -28,6 +29,9 @@ const CheckWin = () => {
     ]
     WinCondition.forEach(e => {
         if ((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].innerText === boxtext[e[1]].innerText) && (boxtext[e[0]].innerText !== "")) {
+            isGameOver = true;
+            gameOver_music.play();
+            document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "200px";
             document.querySelector('.Info').innerText = boxtext[e[0]].innerText + " Won ";
         }
     })
@@ -40,7 +44,6 @@ Array.from(Boxes).forEach(element => {
     let boxtext = element.querySelector('.boxtext');
     //OnClick This Happens:-
     element.addEventListener('click', () => {
-        debugger
         if (boxtext.innerText === "") {
             //Initial default value takes place
             boxtext.innerText = turn;
@@ -51,7 +54,9 @@ Array.from(Boxes).forEach(element => {
             //Check Win or Not
             CheckWin();
             //Change text for whose turn
+            if(isGameOver == false){
             document.getElementsByClassName('Info')[0].innerText = "Turn For " + turn;   
+            }
         }
     })
 })

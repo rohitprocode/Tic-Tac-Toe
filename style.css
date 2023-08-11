@@ -28,6 +28,7 @@ nav ul{
     grid-template-columns: repeat(3, 10vw);
     grid-template-rows: repeat(3, 10vw);
     font-family: 'PT Sans Narrow', sans-serif;
+   
 }
 
 .box{
@@ -45,9 +46,6 @@ nav ul{
     padding: 0px 35px;
     font-family: roboto;
 }
-.imgbox{
-    display: none;
-}
 .bor-l{
     border-left: none;
 }
@@ -59,4 +57,19 @@ nav ul{
 }
 .bor-b{
     border-bottom: none;
+}
+.bor-t-l{
+    border-top-left-radius: 5vw;
+}
+.bor-t-r{
+    border-top-right-radius: 5vw;
+}
+.bor-b-l{
+    border-bottom-left-radius: 5vw;
+}
+.bor-b-r{
+    border-bottom-right-radius: 5vw;
+}
+.imgbox{
+    display: none;
 }

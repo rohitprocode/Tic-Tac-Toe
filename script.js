@@ -51,8 +51,7 @@ Array.from(Boxes).forEach(element => {
             //Check Win or Not
             CheckWin();
             //Change text for whose turn
-            document.getElementsByClassName('Info')[0].innerText = "Turn For " + turn;
-            
+            document.getElementsByClassName('Info')[0].innerText = "Turn For " + turn;   
         }
     })
 })

@@ -20,11 +20,11 @@ const CheckWin = () => {
         [0, 1, 2],
         [3, 4, 5],
         [6, 7, 8],
-        [0, 4, 7],
+        [0, 3, 6],
+        [1, 4, 7],
         [2, 5, 8],
-        [3, 6, 9],
-        [0, 5, 9],
-        [3, 5, 7]
+        [0, 4, 8],
+        [2, 4, 6],
     ]
     WinCondition.forEach(e => {
         if ((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].innerText === boxtext[e[1]].innerText) && (boxtext[e[0]].innerText !== "")) {
@@ -40,9 +40,10 @@ Array.from(Boxes).forEach(element => {
     let boxtext = element.querySelector('.boxtext');
     //OnClick This Happens:-
     element.addEventListener('click', () => {
-        if (element.innerText == "") {
+        debugger
+        if (boxtext.innerText === "") {
             //Initial default value takes place
-            element.innerText = turn;
+            boxtext.innerText = turn;
             //Change Turn
             turn = ChangeTurn();
             //Play Music
@@ -51,6 +52,7 @@ Array.from(Boxes).forEach(element => {
             CheckWin();
             //Change text for whose turn
             document.getElementsByClassName('Info')[0].innerText = "Turn For " + turn;
+            
         }
     })
 })

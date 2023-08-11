@@ -25,15 +25,38 @@ nav ul{
 }
 .container{
     display: grid;
-    grid-template-columns: repeat(3 , 10vw);
+    grid-template-columns: repeat(3, 10vw);
     grid-template-rows: repeat(3, 10vw);
     font-family: 'PT Sans Narrow', sans-serif;
 }
 
 .box{
     border: 2px solid black;
-    font-size:9vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vw;
+    cursor: pointer;    
 }
 .box:hover{
     background-color: rgb(175, 242, 255);
+}
+.gameInfo{
+    padding: 0px 35px;
+    font-family: roboto;
+}
+.imgbox{
+    display: none;
+}
+.bor-l{
+    border-left: none;
+}
+.bor-r{
+    border-right: none;
+}
+.bor-t{
+    border-top: none;
+}
+.bor-b{
+    border-bottom: none;
 }

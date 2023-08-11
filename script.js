@@ -27,11 +27,8 @@ const CheckWin = () => {
         [3, 5, 7]
     ]
     WinCondition.forEach(e => {
-        debugger
         if ((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].innerText === boxtext[e[1]].innerText) && (boxtext[e[0]].innerText !== "")) {
             document.querySelector('.Info').innerText = boxtext[e[0]].innerText + " Won ";
-        } else {
-            document.getElementsByClassName('Info')[0].innerText = "Turn For " + turn;
         }
     })
 }
@@ -53,7 +50,7 @@ Array.from(Boxes).forEach(element => {
             //Check Win or Not
             CheckWin();
             //Change text for whose turn
-
+            document.getElementsByClassName('Info')[0].innerText = "Turn For " + turn;
         }
     })
 })

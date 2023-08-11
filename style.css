@@ -1,75 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=PT+Serif:wght@700&family=Roboto:wght@500&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
-nav{
-    background-color:rgb(81, 20, 91);
-    color:white;
+
+nav {
+    background-color: rgb(81, 20, 91);
+    color: white;
     height: 65px;
     font-size: 27px;
     display: flex;
     align-items: center;
-    padding:0px 12px;
+    padding: 0px 12px;
     font-family: 'PT Sans Narrow', sans-serif;
 }
-nav ul{
+
+nav ul {
     list-style-type: none;
 }
-.gameContainer{
+
+.gameContainer {
     /* background-color: yellow; */
     display: flex;
     justify-content: center;
     margin-top: 50px;
 }
-.container{
+
+.container {
     display: grid;
     grid-template-columns: repeat(3, 10vw);
     grid-template-rows: repeat(3, 10vw);
     font-family: 'PT Sans Narrow', sans-serif;
-   
+
 }
 
-.box{
+.box {
     border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 8vw;
-    cursor: pointer;    
+    cursor: pointer;
 }
-.box:hover{
+
+.box:hover {
     background-color: rgb(175, 242, 255);
 }
-.gameInfo{
+
+.gameInfo {
     padding: 0px 35px;
     font-family: roboto;
 }
-.bor-l{
+
+.bor-l {
     border-left: none;
 }
-.bor-r{
+
+.bor-r {
     border-right: none;
 }
-.bor-t{
+
+.bor-t {
     border-top: none;
 }
-.bor-b{
+
+.bor-b {
     border-bottom: none;
 }
-.bor-t-l{
+
+.bor-t-l {
     border-top-left-radius: 5vw;
 }
-.bor-t-r{
+
+.bor-t-r {
     border-top-right-radius: 5vw;
 }
-.bor-b-l{
+
+.bor-b-l {
     border-bottom-left-radius: 5vw;
 }
-.bor-b-r{
+
+.bor-b-r {
     border-bottom-right-radius: 5vw;
 }
-.imgbox{
+
+.imgbox {
     display: none;
 }

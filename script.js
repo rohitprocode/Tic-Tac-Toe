@@ -64,6 +64,10 @@ let Reset = document.getElementById('Reset');
 Reset.addEventListener('click',()=>{
     let Boxtext = document.querySelectorAll('.boxtext');
     Array.from(Boxtext).forEach(element => {
-        element.innerText = "";
+        element.innerText = "";    
     });
+    document.getElementsByClassName('Info')[0].innerText = "Let's Play";
+    turn = "X";
+    document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "0px";
+   
 })

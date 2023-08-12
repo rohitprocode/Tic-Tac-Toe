@@ -60,3 +60,10 @@ Array.from(Boxes).forEach(element => {
         }
     })
 })
+let Reset = document.getElementById('Reset');
+Reset.addEventListener('click',()=>{
+    let Boxtext = document.querySelectorAll('.boxtext');
+    Array.from(Boxtext).forEach(element => {
+        element.innerText = "";
+    });
+})

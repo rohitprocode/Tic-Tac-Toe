@@ -37,8 +37,8 @@ nav ul {
 
 .line{
     margin: 15vw 5vw;
-    width: 20vw;
-    height: 3px;
+    width: 0vw;
+    height: 0px;
     position: absolute;
     background-color: red;
     transition: 1s ease-in-out;
@@ -129,5 +129,8 @@ nav ul {
     }
     .gameInfo h1{
         font-size: 25px;
+    }
+    .line{
+        display: none;
     }
 }

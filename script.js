@@ -48,6 +48,7 @@ Array.from(Boxes).forEach(element => {
     //OnClick This Happens:-
     element.addEventListener('click', () => {
         if (boxtext.innerText === "") {
+            bg_music.play();
             //Initial default value takes place
             boxtext.innerText = turn;
             //Change Turn
@@ -75,4 +76,6 @@ Reset.addEventListener('click', () => {
     document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "0px";
     isGameOver = false;
     document.getElementsByClassName('Info')[0].innerText = "Turn for " + turn;
+    document.querySelector('.line').style.width = "0px";
+    bg_music.pause();   
 })

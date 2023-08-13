@@ -19,13 +19,13 @@ const CheckWin = () => {
     let boxtext = document.getElementsByClassName('boxtext');
     let WinCondition = [
         [0, 1, 2, 2, -155, 0],
-        [3, 4, 5, 10, 10, 0],
-        [6, 7, 8,],
+        [3, 4, 5, 10, 0, 0],
+        [6, 7, 8, 10, 155, 0],
         [0, 3, 6, -152, -10, 90],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [2, 4, 6],
+        [1, 4, 7, 2, 0, 90],
+        [2, 5, 8, 155, -2, 90],
+        [0, 4, 8, 0, -2, 45],
+        [2, 4, 6, 0, 2, 135],
     ]
     WinCondition.forEach(e => {
         if ((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].innerText === boxtext[e[1]].innerText) && (boxtext[e[0]].innerText !== "")) {
@@ -36,7 +36,7 @@ const CheckWin = () => {
             document.querySelector('.line').style.width = `20vw`;
             document.querySelector('.line').style.height = `3px`;
             document.querySelector('.line').style.transform = `translate(${e[3]}px,${e[4]}px) rotate(${e[5]}deg)`;
-        }//    transform: translate(5px, 155px);rotate: 90deg;
+        }
     })
 }
 

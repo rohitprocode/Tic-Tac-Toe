@@ -18,10 +18,10 @@ const ChangeTurn = () => {
 const CheckWin = () => {
     let boxtext = document.getElementsByClassName('boxtext');
     let WinCondition = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
+        [0, 1, 2, 2, -155, 0],
+        [3, 4, 5, 10, 10, 0],
+        [6, 7, 8,],
+        [0, 3, 6, -152, -10, 90],
         [1, 4, 7],
         [2, 5, 8],
         [0, 4, 8],
@@ -33,7 +33,10 @@ const CheckWin = () => {
             gameOver_music.play();
             document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "200px";
             document.querySelector('.Info').innerText = boxtext[e[0]].innerText + " Won ";
-        }
+            document.querySelector('.line').style.width = `20vw`;
+            document.querySelector('.line').style.height = `3px`;
+            document.querySelector('.line').style.transform = `translate(${e[3]}px,${e[4]}px) rotate(${e[5]}deg)`;
+        }//    transform: translate(5px, 155px);rotate: 90deg;
     })
 }
 

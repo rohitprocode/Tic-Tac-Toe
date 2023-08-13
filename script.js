@@ -65,10 +65,11 @@ Array.from(Boxes).forEach(element => {
 Reset.addEventListener('click', () => {
     let Boxtext = document.querySelectorAll('.boxtext');
     Array.from(Boxtext).forEach(element => {
+        //All field Clear 
         element.innerText = "";
     });
-    document.getElementsByClassName('Info')[0].innerText = "Let's Play";
     turn = "X";
     document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "0px";
     isGameOver = false;
+    document.getElementsByClassName('Info')[0].innerText = "Turn For " + turn;
 })

@@ -48,9 +48,13 @@ nav ul {
     background-color: rgb(175, 242, 255);
 }
 
+.Info{
+    font-size: 25px;
+}
+
 .gameInfo {
     padding: 0px 35px;
-    font-family: roboto;
+    font-family: 'roboto';
 }
 
 .bor-l {
@@ -90,10 +94,15 @@ nav ul {
     transition: width 1s ease-in-out;
 }
 #Reset{
-    /* width: 80px;
-    height: 30px;
-    margin-left: 10px; */
-    margin-left: 10px;
-    padding: 1vw;
-    font-size: 15px;
+    font-family: 'roboto';
+    font-weight: 500;
+    font-size: 25px;
+    margin: 15px 25px;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#Reset:hover{
+    background-color: rgb(81, 20, 91);
+    color: white;
 }

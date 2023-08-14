@@ -36,6 +36,9 @@ const CheckWin = () => {
             document.querySelector('.line').style.width = `20vw`;
             document.querySelector('.line').style.height = `3px`;
             document.querySelector('.line').style.transform = `translate(${e[3]}px,${e[4]}px) rotate(${e[5]}deg)`;
+            document.querySelectorAll('.box')[e[0]].style.background = "lightgreen";
+            document.querySelectorAll('.box')[e[1]].style.background = "lightgreen";
+            document.querySelectorAll('.box')[e[2]].style.background = "lightgreen";
         }
     })
 }
@@ -72,6 +75,11 @@ Reset.addEventListener('click', () => {
         //All field Clear 
         element.innerText = "";
     });
+    // Change BG Color
+    let box = document.querySelectorAll('.box');
+    Array.from(box).forEach(element =>{
+        element.style.background = "white";
+    })
     bgcol = false;
     turn = "X";
     document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "0px";
@@ -79,4 +87,5 @@ Reset.addEventListener('click', () => {
     document.getElementsByClassName('Info')[0].innerText = "Turn for " + turn;
     document.querySelector('.line').style.width = "0px";
     bg_music.pause();
+    
 })

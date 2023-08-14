@@ -5,7 +5,6 @@ let bg_music = new Audio("music.mp3");
 let turn_music = new Audio("ting.mp3");
 let gameOver_music = new Audio("gameover.mp3");
 let isGameOver = false;
-
 //Initial Default Value 
 let turn = "X";
 
@@ -30,6 +29,7 @@ const CheckWin = () => {
     WinCondition.forEach(e => {
         if ((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].innerText === boxtext[e[1]].innerText) && (boxtext[e[0]].innerText !== "")) {
             isGameOver = true;
+            bgcol = true;
             gameOver_music.play();
             document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "200px";
             document.querySelector('.Info').innerText = boxtext[e[0]].innerText + " Won ";
@@ -72,10 +72,11 @@ Reset.addEventListener('click', () => {
         //All field Clear 
         element.innerText = "";
     });
+    bgcol = false;
     turn = "X";
     document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "0px";
     isGameOver = false;
     document.getElementsByClassName('Info')[0].innerText = "Turn for " + turn;
     document.querySelector('.line').style.width = "0px";
-    bg_music.pause();   
+    bg_music.pause();
 })
